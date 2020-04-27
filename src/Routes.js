@@ -5,6 +5,7 @@ import DogDetails from "./DogDetails";
 
 
 
+
 function Routes({ dogs }){
 
 
@@ -15,7 +16,7 @@ function Routes({ dogs }){
             </Route>
 
             <Route path="/dogs/:name">
-                <DogDetails name={dogs}/>
+                <DogDetails dogs={dogs}/>
             </Route>
 
             <Redirect to="/dogs"/>

@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter} from "react-router-dom";
 import './App.css';
-import DogFinder from "./DogFinder";
 import whiskey from "./whiskey.jpg";
 import duke from "./duke.jpg";
 import perry from "./perry.jpg";
@@ -9,16 +8,15 @@ import tubby from "./tubby.jpg"
 import Routes from "./Routes";
 
 
-function App() {
+function App(dogs) {
   return (
     <BrowserRouter>
-    <Routes/>
+    <Routes dogs={dogs}/>
     </BrowserRouter>
   );
 }
 
-
-App.defaultProps = {
+const dogs = {
   dogs: [
     {
       name: "Whiskey",
@@ -63,6 +61,7 @@ App.defaultProps = {
   ]
 }
 
-
+App.defaultProps = dogs;
 
 export default App;
+export {dogs};
